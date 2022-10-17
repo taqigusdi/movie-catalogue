@@ -1,7 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
-const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   entry: {
@@ -40,11 +39,6 @@ module.exports = {
           to: path.resolve(__dirname, 'dist/'),
         },
       ],
-    }),
-    new Dotenv({
-      path: path.resolve(__dirname, '.env'),
-      systemvars: true,
-      safe: true,
     }),
   ],
 };
